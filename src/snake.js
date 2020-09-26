@@ -253,11 +253,14 @@ function checkNewPosition() {
     for (var z = 1; z < snake.length; z++) {
         var part = snake[z];
         if (head.position().top === part.position().top && head.position().left === part.position().left) {
-            showInfoAlert('<h4>Game over!</h4><br/>Highscore: <b>' + snake.length + '</b><br/><br/><a href="#" onclick="location.reload();">Start new game!</a><br/><br/><a href="https://github.com/PKief/Snake" target="_blank">Show source code</a>');
+            showInfoAlert('<h4>Game over!</h4><br/>Highscore: <b>' + snake.length + '</b><br/><br/><a href="#" onclick="location.reload();">Start new game!</a><br/><br/><a href="https://github.com/AkhzarFarhan/Snake" target="_blank">Show source code</a>');
             //focus link for key event
             $('#infoAlert a').focus();
             stopMovingOfSnake = true;
-            killSnake();
+            var get_killed = window.prompt("Enter '1' if you want to kill your snake.");
+            if(get_killed == 1) {
+                killSnake();
+            }
         }
     }    
     
