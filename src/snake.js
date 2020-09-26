@@ -5,7 +5,7 @@ var lastDirectionString = null;
 var foodItems = [];
 var stopMovingOfSnake = false;
 var snake = [];
-var snakeSpeed = 400;
+var snakeSpeed = 600;
 
 var gameFinished = false;
 
@@ -14,7 +14,7 @@ var itemWidth = null;
 var itemHeight = null;
 
 $(function () {    
-    var fieldSize = 32;    
+    var fieldSize = 40;    
     //calculate the field width and height which is depending on the monitor resolution and the items
     var width = (Math.round($(document).width() / fieldSize) * fieldSize) - fieldSize;
     var height = (Math.round($(document).height() / fieldSize) * fieldSize) - fieldSize;
